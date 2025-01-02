@@ -1,5 +1,5 @@
 stages:
-  process-data:
+  collect-data:
     cmd: matlab -batch "run('scripts/collect_data.m');"
     deps:
       - scripts/collect_data.m
