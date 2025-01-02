@@ -1,0 +1,16 @@
+title: Calkit MATLAB example
+description: >
+  This project shows how to incorporate MATLAB into a reproducible
+  research project.
+dependencies:
+  - matlab
+datasets:
+  - path: data/raw/data.parquet
+    title: Raw data
+    description: The raw data.
+    stage: process-data
+figures:
+  - path: figures/plot.png
+    title: The plot
+    description: The plot.
+    stage: plot-data

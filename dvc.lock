@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  process-data:
+    cmd: matlab -batch "run('scripts/collect_data.m');"
+    deps:
+    - path: scripts/collect_data.m
+      hash: md5
+      md5: 2da834907ab6124dd599bff06d6a3b66
+      size: 123
+    outs:
+    - path: data/raw/data.parquet
+      hash: md5
+      md5: 0b2be6aa89192942ea0e1263f9f7e55c
+      size: 384
+  plot-data:
+    cmd: matlab -noFigureWindows -batch "run('scripts/plot_data.m');"
+    deps:
+    - path: data/raw/data.parquet
+      hash: md5
+      md5: 0b2be6aa89192942ea0e1263f9f7e55c
+      size: 384
+    - path: scripts/plot_data.m
+      hash: md5
+      md5: ba170d2081e699117648d76ce4e829da
+      size: 145
+    outs:
+    - path: figures/plot.png
+      hash: md5
+      md5: 746ad0caed8bde9f45d3249d9d539045
+      size: 15194

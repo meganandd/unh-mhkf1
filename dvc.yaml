@@ -1,0 +1,24 @@
+stages:
+  process-data:
+    cmd: matlab -batch "run('scripts/collect_data.m');"
+    deps:
+      - scripts/collect_data.m
+    outs:
+      - data/raw/data.parquet
+    meta:
+      calkit:
+        type: dataset
+        title: Raw data
+        description: The raw data.
+  plot-data:
+    cmd: matlab -noFigureWindows -batch "run('scripts/plot_data.m');"
+    deps:
+      - scripts/plot_data.m
+      - data/raw/data.parquet
+    outs:
+      - figures/plot.png
+    meta:
+      calkit:
+        type: figure
+        title: The plot
+        description: The plot.
