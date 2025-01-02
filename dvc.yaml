@@ -9,7 +9,7 @@ stages:
       calkit:
         type: dataset
         title: Raw data
-        description: The raw data.
+        description: The raw data from the experiment.
   plot-data:
     cmd: matlab -noFigureWindows -batch "run('scripts/plot_data.m');"
     deps:
