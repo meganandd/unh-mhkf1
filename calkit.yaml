@@ -7,7 +7,7 @@ dependencies:
 datasets:
   - path: data/raw/data.parquet
     title: Raw data
-    description: The raw data.
+    description: The raw data from the experiment.
     stage: process-data
 figures:
   - path: figures/plot.png
