@@ -17,26 +17,26 @@ stages:
     deps:
     - path: data/raw/data.parquet
       hash: md5
-      md5: 0b2be6aa89192942ea0e1263f9f7e55c
-      size: 384
+      md5: 7d4fadae29fbf5fdf9eedc81a9f0cc9e
+      size: 9853
     - path: scripts/plot_data.m
       hash: md5
-      md5: ba170d2081e699117648d76ce4e829da
-      size: 145
+      md5: c8b93dbaeeafd299f590282687fa58fa
+      size: 148
     outs:
     - path: figures/plot.png
       hash: md5
-      md5: 746ad0caed8bde9f45d3249d9d539045
-      size: 15194
+      md5: e4d326bd882b78d8e00cd8f3ea761259
+      size: 20609
   collect-data:
     cmd: matlab -batch "run('scripts/collect_data.m');"
     deps:
     - path: scripts/collect_data.m
       hash: md5
-      md5: 2da834907ab6124dd599bff06d6a3b66
-      size: 123
+      md5: 2f8b10c1bed030b42cbca5c50cb15063
+      size: 146
     outs:
     - path: data/raw/data.parquet
       hash: md5
-      md5: 0b2be6aa89192942ea0e1263f9f7e55c
-      size: 384
+      md5: 7d4fadae29fbf5fdf9eedc81a9f0cc9e
+      size: 9853
