@@ -1,7 +1,7 @@
-title: MATLAB example
-description: >
-  This project shows how to incorporate MATLAB into a reproducible
-  research project.
+title: unh-mhkf1
+description: >-
+  Process raw data and create plots from baseline towing tank experiments
+  at UNH using 1-meter MHKF1 rotor.
 dependencies:
   - matlab
 datasets:
@@ -14,3 +14,10 @@ figures:
     title: The plot
     description: The plot.
     stage: plot-data
+owner: meganandd
+name: unh-mhkf1
+git_repo_url: https://github.com/meganandd/unh-mhkf1
+derived_from:
+  project: calkit/example-matlab
+  git_repo_url: https://github.com/calkit/example-matlab
+  git_rev: 088658208e2a1b6378ef53db05d98d08743e124a

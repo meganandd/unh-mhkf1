@@ -1,9 +1,4 @@
-# Calkit MATLAB example
+# unh-mhkf1
 
-This example shows how to use MATLAB in a Calkit project.
 
-To run the project and reproduce the results, execute:
-
-```sh
-calkit run
-```
+Process raw data and create plots from baseline towing tank experiments at UNH using 1-meter MHKF1 rotor.
