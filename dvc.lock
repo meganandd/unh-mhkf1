@@ -17,8 +17,8 @@ stages:
     deps:
     - path: data/raw/data.parquet
       hash: md5
-      md5: 7d4fadae29fbf5fdf9eedc81a9f0cc9e
-      size: 9853
+      md5: eca1f0dc8ce6ea0fadfb1af7c2f7f520
+      size: 9852
     - path: scripts/plot_data.m
       hash: md5
       md5: c8b93dbaeeafd299f590282687fa58fa
@@ -26,8 +26,8 @@ stages:
     outs:
     - path: figures/plot.png
       hash: md5
-      md5: e4d326bd882b78d8e00cd8f3ea761259
-      size: 20609
+      md5: 25755074acead3111b7d30b63511e023
+      size: 20606
   collect-data:
     cmd: matlab -batch "run('scripts/collect_data.m');"
     deps:
@@ -38,5 +38,5 @@ stages:
     outs:
     - path: data/raw/data.parquet
       hash: md5
-      md5: 7d4fadae29fbf5fdf9eedc81a9f0cc9e
-      size: 9853
+      md5: eca1f0dc8ce6ea0fadfb1af7c2f7f520
+      size: 9852
