@@ -28,15 +28,3 @@ stages:
       hash: md5
       md5: 25755074acead3111b7d30b63511e023
       size: 20606
-  collect-data:
-    cmd: matlab -batch "run('scripts/collect_data.m');"
-    deps:
-    - path: scripts/collect_data.m
-      hash: md5
-      md5: 2f8b10c1bed030b42cbca5c50cb15063
-      size: 146
-    outs:
-    - path: data/raw/data.parquet
-      hash: md5
-      md5: eca1f0dc8ce6ea0fadfb1af7c2f7f520
-      size: 9852

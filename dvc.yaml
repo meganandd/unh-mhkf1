@@ -1,22 +1,11 @@
 stages:
-  collect-data:
-    cmd: matlab -batch "run('scripts/collect_data.m');"
-    deps:
-      - scripts/collect_data.m
-    outs:
-      - data/raw/data.parquet
-    meta:
-      calkit:
-        type: dataset
-        title: Raw data
-        description: The raw data from the experiment.
   plot-data:
     cmd: matlab -noFigureWindows -batch "run('scripts/plot_data.m');"
     deps:
-      - scripts/plot_data.m
-      - data/raw/data.parquet
+    - scripts/plot_data.m
+    - data/raw/data.parquet
     outs:
-      - figures/plot.png
+    - figures/plot.png
     meta:
       calkit:
         type: figure
