@@ -31,12 +31,8 @@ function process_test_plan(data_dir, test_plan)
         fprintf('Processing ' + test_name + '. \n')
 
         % number of runs in current test plan
-        n_runs = length(dir(fullfile(data_dir, '\Data\Raw\' + ...
+        n_runs = length(dir(fullfile(data_dir, '\raw\' + ...
             test_name))) - 2;
-    
-        % initialize data structures for raw data from ACS and NI
-        % acs_raw = struct();
-        % ni_raw = struct();
 
         % allocate variables to save later in table 
         run = zeros(length(n_runs), 1);
@@ -109,19 +105,16 @@ function process_test_plan(data_dir, test_plan)
         
         for i = 0 : n_runs - 1
             j = i + 1;
+
             % read acsdata.h5 into struct()
             [acs_info, acs_data] = read_h5([fullfile(data_dir, ...
-            '\Data\Raw\' + test_name + '\' + string(i) + '\acsdata.h5')]);
+            'raw\' + test_name + '\' + string(i) + '\acsdata.h5')]);
             % read nidata.h5 into struct()
             [ni_info, ni_data] = read_h5([fullfile(data_dir, ...
-            '\Data\Raw\' + test_name + '\' + string(i) + '\nidata.h5')]);
-    
-            % % save raw data into struct()
-            % acs_raw.('run_' + string(i)) = acs_data;
-            % ni_raw.('run_' + string(i)) = ni_data;
+            'raw\' + test_name + '\' + string(i) + '\nidata.h5')]);
             
             meta_path = [fullfile(data_dir, ...
-            '\Data\Raw\' + test_name + '\' + string(i) + '\metadata.json')];
+            'raw\' + test_name + '\' + string(i) + '\metadata.json')];
             
             [inst_perf, n_revs, ~, rho, nu] = ...
                 get_inst_perf(acs_info, acs_data, ni_info, ni_data, ...
@@ -132,7 +125,7 @@ function process_test_plan(data_dir, test_plan)
             perf_unc = calc_perf_uncertainty(rev_mean);
             
             processed_path = fullfile(data_dir, ...
-                '\Data\Processed\' + test_name);
+                '\processed\' + test_name);
             
             if ~isfolder((fullfile(processed_path)))
                 mkdir(fullfile(processed_path))

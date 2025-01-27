@@ -6,7 +6,7 @@ function plot_unc_runs(data_dir)
 
     markers = ['o', 'square', "diamond", "pentagram"];
 
-    processed_path = fullfile(data_dir, ['Data\Processed\' ...
+    processed_path = fullfile(data_dir, ['processed\' ...
         'uncertainty_runs\uncertainty_runs.csv']);
     processed_plan = readtable(processed_path);
     [sorted_plan, ~] = sortrows(processed_plan, [2, 3]);

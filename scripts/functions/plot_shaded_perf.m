@@ -10,7 +10,7 @@ function plot_shaded_perf(data_dir, tow_speed)
 
     markers = ["square", "o", "diamond", "pentagram", "^"];
     
-    processed_path = fullfile(data_dir, 'Data\Processed\');
+    processed_path = fullfile(data_dir, 'processed\');
     plan_1 = readtable(fullfile(processed_path, ...
         '0.4-2.0_perf\0.4-2.0_perf.csv'));
     plan_2 = readtable(fullfile(processed_path, ...

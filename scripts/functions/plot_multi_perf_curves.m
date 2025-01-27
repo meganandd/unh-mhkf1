@@ -52,7 +52,7 @@ function plot_multi_perf_curves(data_dir)
 
     markers = ["square", "o", "diamond", "pentagram", "^"];
     
-    processed_path = fullfile(data_dir, 'Data\Processed\');
+    processed_path = fullfile(data_dir, 'processed\');
     % Create a table for each test plan to be averaged together
     plan_1 = readtable(fullfile(processed_path, ...
         '0.4-2.0_perf\0.4-2.0_perf.csv'));

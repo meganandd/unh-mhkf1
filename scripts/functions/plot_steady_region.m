@@ -6,10 +6,10 @@ function plot_steady_region(data_dir)
 
     % read acsdata.h5 into struct()
     [~, acs_data] = read_h5([fullfile(data_dir, ...
-    '\Data\Raw\' + test_name + '\' + string(test_num) + '\acsdata.h5')]);
+    '\raw\' + test_name + '\' + string(test_num) + '\acsdata.h5')]);
     % read nidata.h5 into struct()
     [~, ni_data] = read_h5([fullfile(data_dir, ...
-    '\Data\Raw\' + test_name + '\' + string(test_num) + '\nidata.h5')]);
+    '\raw\' + test_name + '\' + string(test_num) + '\nidata.h5')]);
 
     % Calculate carriage velocity from NI linear encoder data & resample to
     % match length of ACS datasets, overwrites carriage_vel in acs_data

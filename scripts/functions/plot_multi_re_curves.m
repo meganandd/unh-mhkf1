@@ -19,7 +19,7 @@
         "pentagram", "^"];
 
     test_name = string(test_plan);
-    processed_path = fullfile(data_dir, 'Data\Processed\' + ...
+    processed_path = fullfile(data_dir, 'processed\' + ...
         test_name + '\' + test_name + '.csv');
     processed_plan = readtable(processed_path);
     [sorted_plan, ~] = sortrows(processed_plan, [2, 3]);

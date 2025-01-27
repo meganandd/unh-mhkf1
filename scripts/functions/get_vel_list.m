@@ -13,7 +13,7 @@
 function vel_list = get_vel_list(data_dir, test_plan)
     test_name = string(test_plan);
 
-    processed_path = fullfile(data_dir, 'Data\Processed\' + ...
+    processed_path = fullfile(data_dir, 'processed\' + ...
         test_name + '\' + test_name + '.csv');
 
     processed_plan = table2struct(readtable(processed_path));

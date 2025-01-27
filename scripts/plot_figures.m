@@ -1,6 +1,5 @@
 % Data directory location  
-data_dir = ['C:\Users\mande\OneDrive - USNH\Documents\' ...
-    'Axial Flow Turbine Test Bed\Data\MHKF1-1m\'];
+data_dir = "..\data";
 
 % Re_c 
 plot_re_c()
@@ -69,8 +68,12 @@ legend('Location','eastoutside')
 t3.TileSpacing = 'compact';
 t3.Padding = 'compact';
 
+%%
+
 % 0.4-2.0_perf
 plot_perf_curves(data_dir, '0.4-2.0_perf')
+
+%%
 
 % 0.4-2.0_perf (with blockage correction)
 plot_blockage_curves(data_dir, '0.4-2.0_perf');

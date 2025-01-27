@@ -1,6 +1,5 @@
 function plot_settling_times(U_inf)
-    data_dir = ['C:\Users\mande\OneDrive - USNH\Documents\' ...
-        'Axial Flow Turbine Test Bed\Data\Settling Times']; 
+    data_dir = '..\data\raw\settling_times'; 
     suffix = '.dat'; % file type
     
     data_info = dir(fullfile(data_dir, ['*', suffix]));
