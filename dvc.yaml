@@ -2,16 +2,26 @@ stages:
   process-data:
     cmd: matlab -noFigureWindows -batch "run('scripts/process_data.m');"
     deps:
-      - scripts/process_data.m
       - data/raw
+      - scripts/process_data.m
+      - scripts/functions/get_steady_times.m
+      - scripts/functions/calc_exp_unc.m
+      - scripts/functions/get_rev_mean.m
+      - scripts/functions/crosstalk_correction.m
+      - scripts/functions/read_h5.m
     outs:
       - data/processed:
           cache: false # Keep in Git since they will be small CSVs
   plot-data:
     cmd: matlab -noFigureWindows -batch "run('scripts/plot_figures.m');"
     deps:
-      - scripts/plot_figures.m
       - data/raw
       - data/processed
+      - scripts/plot_figures.m
+      - scripts/functions/plot_blockage_curves.m
+      - scripts/functions/plot_multi_perf_curves.m
+      - scripts/functions/plot_multi_re_curves.m
+      - scripts/functions/plot_perf_curves.m
+      - scripts/functions/plot_re_c.m
     outs:
       - figures
