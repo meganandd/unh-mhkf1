@@ -1,13 +1,17 @@
 stages:
-  plot-data:
-    cmd: matlab -noFigureWindows -batch "run('scripts/plot_data.m');"
+  process-data:
+    cmd: matlab -noFigureWindows -batch "run('scripts/process_data.m');"
     deps:
-    - scripts/plot_data.m
-    - data/raw/data.parquet
+      - scripts/process_data.m
+      - data/raw
     outs:
-    - figures/plot.png
-    meta:
-      calkit:
-        type: figure
-        title: The plot
-        description: The plot.
+      - data/processed:
+          cache: false # Keep in Git since they will be small CSVs
+  plot-data:
+    cmd: matlab -noFigureWindows -batch "run('scripts/plot_figures.m');"
+    deps:
+      - scripts/plot_figures.m
+      - data/raw
+      - data/processed
+    outs:
+      - figures
