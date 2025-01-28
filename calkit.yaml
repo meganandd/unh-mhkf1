@@ -4,15 +4,21 @@ description: >-
   at UNH using 1-meter MHKF1 rotor.
 dependencies:
   - git
+  - matlab
 datasets:
-  - path: data/raw/data.parquet
+  - path: data/raw
     title: Raw data
-    description: The raw data from the experiment.
-    stage: collect-data
+    description: >
+      The raw data from the experiment. This includes high frequency time
+      series from all of the sensors and motion control system.
+  - path: data/processed
+    title: Processed data
+    description: Statistical data from the experiment.
+    stage: process-data
 figures:
-  - path: figures/plot.png
-    title: The plot
-    description: The plot.
+  - path: figures/steady-region.png
+    title: Steady region
+    description: An example steady period from a tow tank run.
     stage: plot-data
 owner: meganandd
 name: unh-mhkf1

@@ -1,13 +1,27 @@
 stages:
-  plot-data:
-    cmd: matlab -noFigureWindows -batch "run('scripts/plot_data.m');"
+  process-data:
+    cmd: matlab -noFigureWindows -batch "run('scripts/process_data.m');"
     deps:
-    - scripts/plot_data.m
-    - data/raw/data.parquet
+      - data/raw
+      - scripts/process_data.m
+      - scripts/functions/get_steady_times.m
+      - scripts/functions/calc_exp_unc.m
+      - scripts/functions/get_rev_mean.m
+      - scripts/functions/crosstalk_correction.m
+      - scripts/functions/read_h5.m
     outs:
-    - figures/plot.png
-    meta:
-      calkit:
-        type: figure
-        title: The plot
-        description: The plot.
+      - data/processed:
+          cache: false # Keep in Git since they will be small CSVs
+  plot-data:
+    cmd: matlab -noFigureWindows -batch "run('scripts/plot_figures.m');"
+    deps:
+      - data/raw
+      - data/processed
+      - scripts/plot_figures.m
+      - scripts/functions/plot_blockage_curves.m
+      - scripts/functions/plot_multi_perf_curves.m
+      - scripts/functions/plot_multi_re_curves.m
+      - scripts/functions/plot_perf_curves.m
+      - scripts/functions/plot_re_c.m
+    outs:
+      - figures
