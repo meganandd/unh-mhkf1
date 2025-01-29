@@ -212,5 +212,5 @@ function plot_perf_curves(data_dir, test_plan)
     xlabel('\lambda')
     ylabel('Re_c')
     legend('Location', 'eastoutside')
-    saveas(rec, "./../figures/0.4-2.0_Re_c.png")
+    saveas(rec, "./../figures/0.6-2.0_Re_c.png")
 end

@@ -1,7 +1,7 @@
 title: unh-mhkf1
 description: >-
   Process raw data and create plots from baseline towing tank experiments
-  at UNH using 1-meter MHKF1 rotor.
+  at UNH using a 1-meter MHKF1 rotor.
 dependencies:
   - git
   - matlab
@@ -16,9 +16,168 @@ datasets:
     description: Statistical data from the experiment.
     stage: process-data
 figures:
-  - path: figures/steady-region.png
+  - path: figures/re_c.png
+    title: Chord-based Reynolds number vs. tip-speed ratio
+    description: Chord-based Reynolds number at r/R = 0.7 vs. λ for tow speeds ranging from 0.6 to 2 [m/s].
+    stage: plot-data
+  - path: figures/steady_region.png
     title: Steady region
     description: An example steady period from a tow tank run.
+    stage: plot-data
+  - path: figures/0.4-0.8_settling.png
+    title: Tank settling times for tow speeds ranging from 0.4 to 0.8 [m/s]
+    description: Residual water velocity after a completed tow, u, vs. time for tow speeds ranging from 0.4 to 0.8 [m/s].
+    stage: plot-data
+  - path: figures/1.0-1.4_settling.png
+    title: Tank settling times for tow speeds ranging from 1.0 to 1.4 [m/s]
+    description: Residual water velocity after a completed tow, u, vs. time for tow speeds ranging from 1.0 to 1.4 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_settling.png
+    title: Tank settling times for tow speeds ranging from 1.6 to 2.0 [m/s]
+    description: Residual water velocity after a completed tow, u, vs. time for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.0-1.4_settling.png
+    title: Tank settling times for tow speeds ranging from 1.0 to 1.4 [m/s]
+    description: Residual water velocity after a completed tow, u, vs. time for tow speeds ranging from 1.0 to 1.4 [m/s].
+    stage: plot-data
+  - path: figures/0.4-2.0_CP.png
+    title: Power coefficient vs. tip-speed ratio
+    description: Power coefficient vs. tip-speed ratio for tow speeds ranging from 0.4 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/0.4-2.0_CT.png
+    title: Thrust coefficient vs. tip-speed ratio
+    description: Thrust coefficient vs. tip-speed ratio for tow speeds ranging from 0.4 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/0.4-2.0_CQ.png
+    title: Torque coefficient vs. tip-speed ratio
+    description: Torque coefficient vs. tip-speed ratio for tow speeds ranging from 0.4 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/0.4-2.0_CMx.png
+    title: Lead-lag bending moment coefficient vs. tip-speed ratio
+    description: Lead-lag bending moment coefficient vs. tip-speed ratio for tow speeds ranging from 0.4 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/0.4-2.0_CMy.png
+    title: Flapwise bending moment coefficient vs. tip-speed ratio
+    description: Flapwise bending moment coefficient vs. tip-speed ratio for tow speeds ranging from 0.4 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/blockage_0.4-2.0_CP.png
+    title: Power coefficient vs. tip-speed ratio with blockage correction
+    description: Power coefficient vs. tip-speed ratio for tow speeds ranging from 0.4 to 2.0 [m/s] with blockage correction applied.
+    stage: plot-data
+  - path: figures/blockage_0.4-2.0_CT.png
+    title: Thrust coefficient vs. tip-speed ratio with blockage correction
+    description: Thrust coefficient vs. tip-speed ratio for tow speeds ranging from 0.4 to 2.0 [m/s] with blockage correction applied.
+    stage: plot-data
+  - path: figures/Re_dep_4.0_CP.png
+    title: Power coefficient vs. chord-based Reynolds number
+    description: >
+      Power coefficient vs. chord-based Reynolds number at r/R = 0.7 for λ = 4 and tow speeds ranging from 
+      1.0 to 2.0 [m/s]. Error bars represent expanded uncertainty for 95% confidence.
+    stage: plot-data
+  - path: figures/Re_dep_4.0_CT.png
+    title: Thrust coefficient vs. chord-based Reynolds number
+    description: >
+      Thrust coefficient vs. chord-based Reynolds number at r/R = 0.7 for λ = 4 and tow speeds ranging from 
+      1.0 to 2.0 [m/s]. Error bars represent expanded uncertainty for 95% confidence.
+    stage: plot-data
+  - path: figures/0.6-2.0_Re_c.png
+    title: Chord-based Reynolds number vs. tip-speed ratio using experimental results 
+    description: Chord-based Reynolds number at r/R = 0.7 vs. λ for tow speeds ranging from 0.6 to 2 [m/s] created using experimental data.
+    stage: plot-data
+  - path: figures/1.6-2.0_CP.png
+    title: Power coefficient vs. tip-speed ratio
+    description: Power coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_CP_detail.png
+    title: Detail view of power coefficient vs. tip-speed ratio
+    description: Detail view of power coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_CT.png
+    title: Thrust coefficient vs. tip-speed ratio
+    description: Thrust coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_CT_detail.png
+    title: Detail view of thrust coefficient vs. tip-speed ratio
+    description: Detail view of thrust coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_CQ.png
+    title: Torque coefficient vs. tip-speed ratio
+    description: Torque coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_CQ_detail.png
+    title: Detail view of torque coefficient vs. tip-speed ratio
+    description: Detail view of torque coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_CMx.png
+    title: Lead-lag bending moment coefficient vs. tip-speed ratio
+    description: Lead-lag bending moment coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_CMx_detail.png
+    title: Detail view of lead-lag bending moment coefficient vs. tip-speed ratio
+    description: Detail view of lead-lag bending moment coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_CMy.png
+    title: Flapwise bending moment coefficient vs. tip-speed ratio
+    description: Flapwise bending moment coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/1.6-2.0_CMy_detail.png
+    title: Detail view of flapwise bending moment coefficient vs. tip-speed ratio
+    description: Detail view of flapwise bending moment coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/blockage_1.6-2.0_CP.png
+    title: Power coefficient vs. tip-speed ratio with blockage correction
+    description: Power coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s] with blockage correction applied.
+    stage: plot-data
+  - path: figures/blockage_1.6-2.0_CT.png
+    title: Thrust coefficient vs. tip-speed ratio with blockage correction
+    description: Thrust coefficient vs. tip-speed ratio for tow speeds ranging from 1.6 to 2.0 [m/s] with blockage correction applied.
+    stage: plot-data
+  - path: figures/1.6-2.0_CP_fontaine.png
+    title: Power coefficient vs. tip-speed ratio with data from Fontaine et al. (2020)
+    description: >
+      Power coefficient vs. λ for tow speeds ranging from 1.6 to 2.0 [m/s] with blockage correction plotted 
+      with results from Fontaine et al. (2020).
+    stage: plot-data
+  - path: figures/1.6-2.0_CT_fontaine.png
+    title: Thrust coefficient vs. tip-speed ratio with data from Fontaine et al. (2020)
+    description: >
+      Thrust coefficient vs. λ for tow speeds ranging from 1.6 to 2.0 [m/s] with blockage correction plotted 
+      with results from Fontaine et al. (2020).
+    stage: plot-data
+  - path: figures/openfast_CP.png
+    title: Power coefficient vs. tip-speed ratio with OpenFAST model data
+    description: >
+      OpenFAST numerical model estimates for power coefficient plotted with blockage-corrected
+      1 meter MHKF1 results.
+    stage: plot-data
+  - path: figures/openfast_CT.png
+    title: Thrust coefficient vs. tip-speed ratio with OpenFAST model data
+    description: >
+      OpenFAST numerical model estimates for thrust coefficient plotted with blockage-corrected
+      1 meter MHKF1 results.
+    stage: plot-data
+  - path: figures/perc_unc_CP.png
+    title: Power coefficient percent uncertainty vs. tip-speed ratio
+    description: Power coefficient percent uncertainty vs. λ for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/perc_unc_CT.png
+    title: Thrust coefficient percent uncertainty vs. tip-speed ratio
+    description: Thrust coefficient percent uncertainty vs. λ for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/perc_unc_CMx.png
+    title: Lead-lag bending moment coefficient percent uncertainty vs. tip-speed ratio
+    description: Lead-lag bending moment coefficient percent uncertainty vs. λ for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/perc_unc_CMy.png
+    title: Flapwise bending moment coefficient percent uncertainty vs. tip-speed ratio
+    description: Flapwise bending moment coefficient percent uncertainty vs. λ for tow speeds ranging from 1.6 to 2.0 [m/s].
+    stage: plot-data
+  - path: figures/uncertainty_vs_trials.png
+    title: Expanded uncertainty vs. number of trials 
+    description: >
+       Percent expanded uncertainty with 95% confidence of mean performance coefficient 
+       parameters for increasing number of completed trials at a tow speed of 1.6 [m/s] and λ = 1,
+       4, and 8.
     stage: plot-data
 owner: meganandd
 name: unh-mhkf1
