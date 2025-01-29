@@ -84,6 +84,7 @@
     xlabel('Re_c')
     ylabel('C_P')
     [~, ~, ~, ~] = legend(legendUnq(re_cp), 'Location', 'eastoutside');
+    saveas(re_cp, "./../figures/Re_dep_4.0_CP.png")
 
     re_ct = figure(15);
     set(re_ct, 'renderer', 'painter');
@@ -108,4 +109,5 @@
     xlabel('Re_c')
     ylabel('C_T')
     [~, ~, ~, ~] = legend(legendUnq(re_ct), 'Location', 'eastoutside');
+    saveas(re_ct, "./../figures/Re_dep_4.0_CT.png")
 end

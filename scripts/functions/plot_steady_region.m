@@ -32,4 +32,6 @@ function plot_steady_region(data_dir)
     xline(22, '--', 'LineWidth', 2)
     xlim([0 32])
     xlabel('Time [s]')
+
+    saveas(f, "./../figures/steady_region.png")
 end

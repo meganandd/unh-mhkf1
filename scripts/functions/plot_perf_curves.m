@@ -81,6 +81,7 @@ function plot_perf_curves(data_dir, test_plan)
     xlabel('\lambda')
     ylabel('C_P')
     [~, ~, ~, ~] = legend(legendUnq(cp), 'Location', 'eastoutside');
+    saveas(cp, "./../figures/0.4-2.0_CP.png")
 
     ct = figure(7);
     set(ct, 'renderer', 'painters')
@@ -103,6 +104,7 @@ function plot_perf_curves(data_dir, test_plan)
     xlabel('\lambda')
     ylabel('C_T')
     [~, ~, ~, ~] = legend(legendUnq(ct), 'Location', 'eastoutside');
+    saveas(ct, "./../figures/0.4-2.0_CT.png")
 
     cq = figure(8);
     set(cq, 'renderer', 'painters')
@@ -125,6 +127,7 @@ function plot_perf_curves(data_dir, test_plan)
     xlabel('\lambda')
     ylabel('C_Q')
     [~, ~, ~, ~] = legend(legendUnq(cq), 'Location', 'eastoutside');
+    saveas(cq, "./../figures/0.4-2.0_CQ.png")
 
     cmx = figure(9);
     set(cmx, 'renderer', 'painters')
@@ -147,6 +150,7 @@ function plot_perf_curves(data_dir, test_plan)
     xlabel('\lambda')
     ylabel('C_{Mx}')
     [~, ~, ~, ~] = legend(legendUnq(cmx), 'Location', 'eastoutside');
+    saveas(cmx, "./../figures/0.4-2.0_CMx.png")
 
     cmy = figure(10);
     set(cmy, 'renderer', 'painters')
@@ -169,6 +173,7 @@ function plot_perf_curves(data_dir, test_plan)
     xlabel('\lambda')
     ylabel('C_{My}')
     [~, ~, ~, ~] = legend(legendUnq(cmy), 'Location', 'eastoutside');
+    saveas(cmy, "./../figures/0.4-2.0_CMy.png")
 
     rec = figure(11);
     set(rec, 'renderer', 'painters')
@@ -207,4 +212,5 @@ function plot_perf_curves(data_dir, test_plan)
     xlabel('\lambda')
     ylabel('Re_c')
     legend('Location', 'eastoutside')
+    saveas(rec, "./../figures/0.4-2.0_Re_c.png")
 end

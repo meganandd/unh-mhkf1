@@ -1,3 +1,6 @@
+% Add path to scripts/functions
+addpath('functions')
+
 % Data directory location  
 data_dir = "..\data";
 
@@ -27,6 +30,7 @@ legend('Location','eastoutside')
 
 t1.TileSpacing = 'compact';
 t1.Padding = 'compact';
+saveas(f3, "./../figures/0.4-0.8_settling.png")
 
 % U_inf = 1.0-1.4 [m/s]
 f4 = figure(4);
@@ -47,6 +51,7 @@ legend('Location','eastoutside')
 
 t2.TileSpacing = 'compact';
 t2.Padding = 'compact';
+saveas(f4, "./../figures/1.0-1.4_settling.png")
 
 % U_inf = 1.6-2.0 [m/s]
 f5 = figure(5);
@@ -67,13 +72,10 @@ legend('Location','eastoutside')
 
 t3.TileSpacing = 'compact';
 t3.Padding = 'compact';
-
-%%
+saveas(f5, "./../figures/1.6-2.0_settling.png")
 
 % 0.4-2.0_perf
 plot_perf_curves(data_dir, '0.4-2.0_perf')
-
-%%
 
 % 0.4-2.0_perf (with blockage correction)
 plot_blockage_curves(data_dir, '0.4-2.0_perf');

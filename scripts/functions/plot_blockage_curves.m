@@ -82,6 +82,7 @@ function plot_blockage_curves(data_dir, test_plan)
     xlabel('\lambda''')
     ylabel('C_P''')
     [~, ~, ~, ~] = legend(legendUnq(cp), 'Location', 'eastoutside');
+    saveas(cp, "./../figures/blockage_0.4-2.0_CP.png")
 
     ct = figure(13);
     set(ct, 'renderer', 'painter');
@@ -104,5 +105,6 @@ function plot_blockage_curves(data_dir, test_plan)
     xlabel('\lambda''')
     ylabel('C_T''')
     [~, ~, ~, ~] = legend(legendUnq(ct), 'Location', 'eastoutside');
+    saveas(ct, "./../figures/blockage_0.4-2.0_CT.png")
 end
 

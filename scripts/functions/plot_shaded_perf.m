@@ -76,6 +76,7 @@ function plot_shaded_perf(data_dir, tow_speed)
     xlim([1 8])
     ylabel('C_P')
     legend()
+    saveas(cp, "./../figures/CP_2.0_shadedError.png")
 
     % C_T vs. TSR
     ct = figure(38);
@@ -87,6 +88,7 @@ function plot_shaded_perf(data_dir, tow_speed)
     xlim([1 8])
     ylabel('C_T')
     legend()
+    saveas(ct, "./../figures/CT_2.0_shadedError.png")
 
     % C_Mx vs. TSR
     cmx = figure(39);
@@ -98,6 +100,7 @@ function plot_shaded_perf(data_dir, tow_speed)
     xlim([1 8])
     ylabel('C_{Mx}')
     legend()
+    saveas(cmx, "./../figures/CMx_2.0_shadedError.png")
 
     % C_My vs. TSR
     cmy = figure(40);
@@ -109,4 +112,5 @@ function plot_shaded_perf(data_dir, tow_speed)
     xlim([1 8])
     ylabel('C_{My}')
     legend()
+    saveas(cmy, "./../figures/CMy_2.0_shadedError.png")
 end

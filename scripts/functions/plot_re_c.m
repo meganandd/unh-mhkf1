@@ -46,4 +46,6 @@ function plot_re_c()
     yline(5*10^5, 'r--', 'Re_c = 500,000', 'LineWidth', 2, "DisplayName", ...
         "IEC Upper Critical Re_c", "LabelHorizontalAlignment", "left", ...
         "LabelVerticalAlignment", "bottom")
+
+    saveas(f, "./../figures/re_c.png")
 end
