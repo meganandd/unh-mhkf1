@@ -219,5 +219,5 @@ function plot_unc_runs(data_dir)
     t.TileSpacing = 'compact';
     t.Padding = 'compact';
 
-    saveas(f, "./../uncertainty_vs_trials.png")
+    saveas(f, "./../figures/uncertainty_vs_trials.png")
 end
