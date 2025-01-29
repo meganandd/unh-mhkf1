@@ -1,17 +1,43 @@
 schema: '2.0'
 stages:
   process-data:
-    cmd: matlab -batch "run('scripts/collect_data.m');"
+    cmd: matlab -noFigureWindows -batch "run('scripts/process_data.m');"
     deps:
-    - path: scripts/collect_data.m
+    - path: data/raw
       hash: md5
-      md5: 2da834907ab6124dd599bff06d6a3b66
-      size: 123
+      md5: 183bb0fecbf747f25382d7d4b55ee1d7.dir
+      size: 3867877395
+      nfiles: 1917
+    - path: scripts/functions/calc_exp_unc.m
+      hash: md5
+      md5: ff5e594738a9dec82c529fc7d38ed45c
+      size: 429
+    - path: scripts/functions/crosstalk_correction.m
+      hash: md5
+      md5: a964ca93038a23ae08606d2c60f46d13
+      size: 4265
+    - path: scripts/functions/get_rev_mean.m
+      hash: md5
+      md5: 8762fe008498678c9a55f940dd0c9e35
+      size: 5724
+    - path: scripts/functions/get_steady_times.m
+      hash: md5
+      md5: c3ba4759793a11266b9c305bb9cd8d8d
+      size: 5569
+    - path: scripts/functions/read_h5.m
+      hash: md5
+      md5: 7e46f7f47be5259d802d7b7817f34d2d
+      size: 488
+    - path: scripts/process_data.m
+      hash: md5
+      md5: e0287b3c5dc50a95487e4638fc595b9f
+      size: 259
     outs:
-    - path: data/raw/data.parquet
+    - path: data/processed
       hash: md5
-      md5: 0b2be6aa89192942ea0e1263f9f7e55c
-      size: 384
+      md5: d0b6bbbdd9a3dcd765978cda2c754fe7.dir
+      size: 550445
+      nfiles: 5
   plot-data:
     cmd: matlab -noFigureWindows -batch "run('scripts/plot_data.m');"
     deps:

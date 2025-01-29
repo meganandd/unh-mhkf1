@@ -4,6 +4,9 @@ addpath('functions')
 % Data directory location  
 data_dir = "..\data";
 
+% Make 'figures' folder
+mkdir("..\figures")
+
 % Re_c 
 plot_re_c()
 
