@@ -39,18 +39,45 @@ stages:
       size: 550445
       nfiles: 5
   plot-data:
-    cmd: matlab -noFigureWindows -batch "run('scripts/plot_data.m');"
+    cmd: matlab -noFigureWindows -batch "run('scripts/plot_figures.m');"
     deps:
-    - path: data/raw/data.parquet
+    - path: data/processed
       hash: md5
-      md5: eca1f0dc8ce6ea0fadfb1af7c2f7f520
-      size: 9852
-    - path: scripts/plot_data.m
+      md5: d0b6bbbdd9a3dcd765978cda2c754fe7.dir
+      size: 550445
+      nfiles: 5
+    - path: data/raw
       hash: md5
-      md5: c8b93dbaeeafd299f590282687fa58fa
-      size: 148
+      md5: 183bb0fecbf747f25382d7d4b55ee1d7.dir
+      size: 3867877395
+      nfiles: 1917
+    - path: scripts/functions/plot_blockage_curves.m
+      hash: md5
+      md5: 2a7e1cd45a3c98e40b460ec75e395aef
+      size: 3029
+    - path: scripts/functions/plot_multi_perf_curves.m
+      hash: md5
+      md5: 72045ead2fb86322407e1c211415e779
+      size: 18156
+    - path: scripts/functions/plot_multi_re_curves.m
+      hash: md5
+      md5: a5e1deccb30f5dad1e47f2fa210b6e0d
+      size: 3386
+    - path: scripts/functions/plot_perf_curves.m
+      hash: md5
+      md5: 9537830979da06ee2b0645ec3a959d44
+      size: 5872
+    - path: scripts/functions/plot_re_c.m
+      hash: md5
+      md5: aa3c85d9ed022b2182b0629e90b9ce9e
+      size: 1443
+    - path: scripts/plot_figures.m
+      hash: md5
+      md5: cca06a1b7403ee10c035908757598c1d
+      size: 2166
     outs:
-    - path: figures/plot.png
+    - path: figures
       hash: md5
-      md5: 25755074acead3111b7d30b63511e023
-      size: 20606
+      md5: 0dd2d92de65e1fd4fb61b57e017cc176.dir
+      size: 2556746
+      nfiles: 39
