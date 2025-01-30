@@ -15,9 +15,6 @@ datasets:
     title: Processed data
     description: Statistical data from the experiment.
     stage: process-data
-  - path: data/processed/0.4-2.0_perf/0.4-2.0_perf.csv
-    title: ''
-    description: ''
 figures:
   - path: figures/re_c.png
     title: Chord-based Reynolds number vs. tip-speed ratio
