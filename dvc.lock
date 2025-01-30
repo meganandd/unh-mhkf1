@@ -57,8 +57,8 @@ stages:
       size: 3029
     - path: scripts/functions/plot_multi_perf_curves.m
       hash: md5
-      md5: 72045ead2fb86322407e1c211415e779
-      size: 18156
+      md5: 56c5a57aa248ce09509a8b21dc068c81
+      size: 18138
     - path: scripts/functions/plot_multi_re_curves.m
       hash: md5
       md5: a5e1deccb30f5dad1e47f2fa210b6e0d
@@ -78,6 +78,6 @@ stages:
     outs:
     - path: figures
       hash: md5
-      md5: 0dd2d92de65e1fd4fb61b57e017cc176.dir
-      size: 2556746
-      nfiles: 39
+      md5: 44fdaab68cefa4293daa66368ff68391.dir
+      size: 2626431
+      nfiles: 40
