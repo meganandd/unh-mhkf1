@@ -217,9 +217,6 @@ figures:
       at a tow speed of 1.6 [m/s] and λ = 1,
       4, and 8.
     stage: plot-data
-  - path: figures/1.6-1.8_settling.png
-    title: ''
-    description: ''
 owner: meganandd
 name: unh-mhkf1
 git_repo_url: https://github.com/meganandd/unh-mhkf1
